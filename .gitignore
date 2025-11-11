@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+*.log
+*.db
+.env
+venv/
+env/
+ros2_ws/
