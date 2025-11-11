@@ -1,3 +1,8 @@
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![MQTT](https://img.shields.io/badge/MQTT-Mosquitto%202.x-6A1B9A)
+![ROS%202](https://img.shields.io/badge/ROS%202-Humble-3776AB)
+![License: MIT](https://img.shields.io/badge/License-MIT-green)
+
 # Swarm Verification Lab
 
 ### Overview
