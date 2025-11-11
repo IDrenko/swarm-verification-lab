@@ -1,0 +1,14 @@
+[Unit]
+Description=Swarm Dashboard (Flask)
+After=network-online.target swarm-manager.service
+
+[Service]
+User=<YOUR_USER_ON_M1>
+WorkingDirectory=/home/<YOUR_USER_ON_M1>
+ExecStart=/usr/bin/python3 /home/<YOUR_USER_ON_M1>/swarm_dashboard.py
+Environment=DB=/home/<YOUR_USER_ON_M1>/swarm_net.db
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
