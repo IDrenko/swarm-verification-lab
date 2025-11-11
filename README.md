@@ -40,3 +40,17 @@ ROS 2 integration extends this architecture into simulated swarm experiments.
 ![ROS 2 Listener](DOCS/Screenshots/ros2_listener.png)
 
 ---
+
+## 🧯 Troubleshooting
+
+| Problem | Likely Cause | Solution |
+|----------|---------------|----------|
+| `ros2: command not found` on R1 | ROS 2 not installed natively | Run listener in Docker container (see R1 steps) |
+| No data received on M1 | MQTT broker or IP misconfigured | Check `BROKER_IP` in `robot_net_agent.py` and verify port 1883 open |
+| Dashboard shows no devices | Robot agent not publishing | Check `sudo systemctl status robot-net-agent` and `/var/log/robot_agent.log` |
+| Container listener sees nothing | ROS 2 domain mismatch | Ensure both systems set `ROS_DOMAIN_ID=42` and `--net=host` used |
+| Permission denied during apt | Missing `sudo` | Prefix with `sudo` or run as root |
+| SQLite database empty | Manager not subscribed | Confirm `manager_net.py` running and connected to MQTT topic |
+
+---
+
