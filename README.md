@@ -101,6 +101,14 @@ sudo tail -f /var/log/robot_agent.log
 ```
 ---
 
+**Documentation**
+- [Setup Guide](DOCS/setup.md)
+- [Architecture](DOCS/architecture.md)
+- [Troubleshooting](DOCS/troubleshooting.md)
+- [Roadmap](DOCS/roadmap.md)
+
+---
+
 ## 📸 Screenshots
 ![Dashboard](DOCS/Screenshots/Dashboard_UI.png)
 ![ROS 2 Listener](DOCS/Screenshots/ros2_listener.png)
