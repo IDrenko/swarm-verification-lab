@@ -36,7 +36,7 @@ ROS 2 integration extends this architecture into simulated swarm experiments.
 ---
 
 ## 📸 Screenshots
-![Dashboard](DOCS/Screenshots/dashboard_UI.png)
+![Dashboard](DOCS/Screenshots/Dashboard_UI.png)
 ![ROS 2 Listener](DOCS/Screenshots/ros2_listener.png)
 
 ---
