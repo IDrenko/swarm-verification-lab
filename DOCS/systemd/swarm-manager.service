@@ -1,0 +1,16 @@
+[Unit]
+Description=Swarm Manager (MQTT -> SQLite)
+After=network-online.target mosquitto.service
+Wants=network-online.target mosquitto.service
+
+[Service]
+Type=simple
+User=<YOUR_USER_ON_M1>
+WorkingDirectory=/home/<YOUR_USER_ON_M1>
+ExecStart=/usr/bin/python3 /home/<YOUR_USER_ON_M1>/manager_net.py
+Environment=PYTHONUNBUFFERED=1
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
