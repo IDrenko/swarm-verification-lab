@@ -22,13 +22,13 @@ ROS 2 integration extends this architecture into simulated swarm experiments.
 [ Robots R1…Rn ]
 ↳ robot_net_agent.py
 ↳ Publishes detections via MQTT
-│
+
 ▼
 [ M1 Manager ]
 ↳ Mosquitto broker (1883)
 ↳ manager_net.py → SQLite (swarm_net.db)
 ↳ swarm_dashboard.py (Flask Web UI)
-│
+
 ▼
 [ ROS 2 Bridge ]
 ↳ mqtt_to_ros node → publishes /swarm/detection
