@@ -61,15 +61,16 @@ ROS 2 integration extends this architecture into simulated swarm experiments.
 ```bash
 sudo apt update
 sudo apt install -y mosquitto mosquitto-clients python3-paho-mqtt python3-flask sqlite3
-
+#
+'''markdown
 #### 2. Enable The Broker
-
+'''bash
 sudo tee /etc/mosquitto/conf.d/lab.conf <<'EOF'
 listener 1883 0.0.0.0
 allow_anonymous true
 EOF
 sudo systemctl enable --now mosquitto
-
+#
 #### 3. Start the manager and dashboard
 
 python3 manager_net.py
