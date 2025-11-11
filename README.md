@@ -61,42 +61,39 @@ ROS 2 integration extends this architecture into simulated swarm experiments.
 ```bash
 sudo apt update
 sudo apt install -y mosquitto mosquitto-clients python3-paho-mqtt python3-flask sqlite3
-#
-```markdown
+```
 #### 2. Enable The Broker
-
 ```bash
-
 sudo tee /etc/mosquitto/conf.d/lab.conf <<'EOF'
 listener 1883 0.0.0.0
 allow_anonymous true
 EOF
 sudo systemctl enable --now mosquitto
-#
+```
 #### 3. Start the manager and dashboard
-
+```bash
 python3 manager_net.py
 python3 swarm_dashboard.py    # then open http://M1_IP:8088 in a browser
-
+```
 ### 🤖 R1 — Robot Node Setup
 
 #### 1. Install dependencies
-
+```bash
 sudo apt update
 sudo apt install -y python3-paho-mqtt python3-requests docker.io
 sudo usermod -aG docker $USER && newgrp docker
-
+```
 #### 2. Configure the robot agent
-
+```bash
 nano robot_net_agent.py
 # Set the MQTT broker address to your M1 IP:
 # BROKER_IP = "M1.local"
-
+```
 #### 3. Enable and start the agent
-
+```bash
 sudo systemctl enable --now robot-net-agent
 sudo tail -f /var/log/robot_agent.log
-
+```
 ---
 
 ## 📸 Screenshots
